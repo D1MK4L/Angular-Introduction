@@ -23,7 +23,6 @@
   }
   ```
 
-
 # Βήμα 3: Component Input
  
 - Δημιουργία interface για τα δεδομένα τύπου `Person`
