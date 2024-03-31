@@ -19,7 +19,7 @@
  
   ```html
   @for (user of users; track user) {
-<app-person-table [person]="user"></app-person-table>
+    <app-person-table [person]="user"></app-person-table>
   }
   ```
 
@@ -29,7 +29,7 @@
 - Δημιουργία interface για τα δεδομένα τύπου `Person`
  
   ```bash
-  ng generate interface shared/interfaces/person
+    ng generate interface shared/interfaces/person
   ```
  
   ```typescript
@@ -51,12 +51,12 @@
 - Η δέσμευση των χαρακτηριστικών της κλάσης `AppComponent` στο χαρακτηριστικό `person` του component `PersonTableComponent` γίνεται στο template του component `AppComponent`
  
   ```html
-<app-person-table [person]="person0"></app-person-table>
-<!-- Χωρίς δέσμευση στο επόμενο -->
-<app-person-table></app-person-table>
-<app-person-table [person]="person1"></app-person-table>
-  ```
-
+  <app-person-table [person]="person0"></app-person-table>
+  <!-- Χωρίς δέσμευση στο επόμενο -->
+  <app-person-table></app-person-table>
+  <app-person-table [person]="person1"></app-person-table>
+```
+```
 
 # Βήμα 2: Δημιουργία νέου component
  
