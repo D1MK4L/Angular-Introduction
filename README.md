@@ -1,6 +1,30 @@
 # Εισαγωγή στο Angular Framework
 
-## Βήμα 3: Component Input
+
+# Βήμα 5: Event binding
+
+Δέσμευση μεθόδου της κλάσης (event handler) στο συμβάν event του template με χρήση του (eventName)="onEventName($event)"
+
+<button (click)="onAddPerson()">Add Person</button>
+
+Χρήση του event input από ένα HTML input element για ανάγνωση της τιμής του στην κλάση και στη συνέχεια πέρασμα πίσω στο template με χρήση της απλής δέσμευση με το {{ <atribute_name > }}
+
+<input type="text" (input)="onInput($event)" />
+
+
+# Βήμα 4: @for Template Directive
+ 
+- Ορισμός χαρακτηριστικού `persons` τύπου `Person[]` στην κλάση `AppComponent` (πίνακας αντικειμένων τύπου `Person`)
+- Χρήση του template directive `@for(obj of objects); track obj` για την εμφάνιση των δεδομένων του πίνακα `persons` με τη χρήση του component `PersonTableComponent`
+ 
+  ```html
+  @for (user of users; track user) {
+<app-person-table [person]="user"></app-person-table>
+  }
+  ```
+
+
+# Βήμα 3: Component Input
  
 - Δημιουργία interface για τα δεδομένα τύπου `Person`
  
@@ -33,7 +57,8 @@
 <app-person-table [person]="person1"></app-person-table>
   ```
 
-## Βήμα 2: Δημιουργία νέου component
+
+# Βήμα 2: Δημιουργία νέου component
  
 - Δημιουργία ενός νέου component με την εντολή `ng generate component components/person-table`.
 - Μεταφορά του πίνακα από το `app.component.html` στο template του νέου component.
@@ -41,12 +66,13 @@
 - Συμπερίληψη της κλάσης `PersonTableComponent` στον πίνακα `imports` στην αρχικοποίηση του decorator στο αρχείο `app.component.ts`.
 - Χρήση του νέου component στο template του `app.component.html` με την ετικέτα `<app-person-table></app-person-table>`.
 
-## Βήμα 1: Απλή δέσμευση χαρακτηριστικών (one way binding)
+
+# Βήμα 1: Απλή δέσμευση χαρακτηριστικών (one way binding)
  
 - Χρήση του placeholder `{{ <atribute_name > }}` για τη δεσμευση του χαρακτηριστικού `attribute_name` στο template του component.
 - Αν το χαρακτηριστικό της κλάσης είναι αντικείμενο τότε χρησιμοποιούμε τη γνωστή σύνταξη `{{ <object_name>.<attribute_name> }}`.
  
-## Βήμα 0: Προετοιμασία και βασικές ενέργειες
+# Βήμα 0: Προετοιμασία και βασικές ενέργειες
  
 - Εγκατάσταση του Angular CLI
  
