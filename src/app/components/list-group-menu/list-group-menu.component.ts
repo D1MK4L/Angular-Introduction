@@ -18,6 +18,10 @@ export class ListGroupMenuComponent {
     {
       text: 'Component Output Example', 
       routerLink: 'component-output-example'
-    }
+    },
+    {
+      text: 'Template Driven From Example',
+      routerLink: 'template-driven-form-example'
+    },
   ];
 }
