@@ -12,9 +12,16 @@ class="d-flex flex-column gap-3 w-50">
     <input type="password" id="password" class="form-control" formControlName="password"/>
 </div>
 <button type="Submit" class="btn btn-primary" [disabled]="!form.valid">Login</button>
-@if(invalidLogin) {
-    <div class="alert alert-danger"><strong>Error: </strong>
-        Invalid email or password
+@if (invalidLogin) {
+    <div class="alert alert-danger">
+      <strong>Error:</strong>
+      Invalid email or password. Click
+      <a
+        role="button"
+        routerLink="/user-registration-example">
+        here
+      </a>
+      to register
     </div>
 }
 </form>
